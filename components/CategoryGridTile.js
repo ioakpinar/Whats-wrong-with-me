@@ -29,16 +29,16 @@ const styles = StyleSheet.create({
   gridItem: {
     flex: 1,
     margin: 15,
-    height: 180,
+    height: 130,
   },
   itemText: {
-    color: Colors.textColor,
+    color: Colors.primaryColor,
     fontFamily: "open-sans-bold",
     fontSize: 15,
     textAlign: "right",
   },
   itemBackground: {
-    backgroundColor: Colors.primaryColor,
+    backgroundColor: Colors.textColor,
     flex: 1,
     borderRadius: 10,
     shadowColor: "black",
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 8,
     padding: 20,
-    justifyContent: "flex-end",
-    alignItems: "flex-end",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

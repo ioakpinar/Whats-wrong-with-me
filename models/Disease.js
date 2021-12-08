@@ -13,7 +13,7 @@ class Disease {
     this.name = name;
     this.description = description;
     this.symptoms = symptoms;
-    this.suggestion = suggestion;
+    this.suggestions = suggestions;
     this.importance = importance;
   }
 }
