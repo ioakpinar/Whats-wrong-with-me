@@ -1,12 +1,27 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
+
+import { DISEASES } from "../data/dummy-data";
 
 const DiseaseDetail = (props) => {
+  const diseaseId = props.navigation.getParam("diseaseId");
+  const currentDisease = DISEASES.find((disease) => disease.id == diseaseId);
+  console.log(currentDisease);
+
   return (
-    <View style={styles.screen}>
-      <Text>The Disease Detail Screen!</Text>
+    <View>
+      <Text>{currentDisease.name}</Text>
     </View>
   );
+};
+
+DiseaseDetail.navigationOptions = (navigationData) => {
+  const diseaseId = navigationData.navigation.getParam("diseaseId");
+  const currentDisease = DISEASES.find((q) => q.id == diseaseId);
+
+  return {
+    headerTitle: currentDisease.name,
+  };
 };
 
 const styles = StyleSheet.create({

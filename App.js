@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
+import { enableScreens } from "react-native-screens";
 
 import DiseasesNavigator from "./Navigation/DiseasesNavigator";
-import DiseaseDetail from "./screens/DiseaseDetail";
 
-const fetchFonts = () => {
-  Font.loadAsync({
+enableScreens();
+
+const fetchFonts = async () => {
+  await Font.loadAsync({
     "open-sans": require("./assets/Fonts/OpenSans-Regular.ttf"),
     "open-sans-bold": require("./assets/Fonts/OpenSans-Bold.ttf"),
   });
